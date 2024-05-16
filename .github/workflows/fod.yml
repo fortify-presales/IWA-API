@@ -21,9 +21,6 @@ on:
       - 'bin/**'
       - 'data/**'
       - 'etc/**'
-      - 'media/**'
-      - 'Jenkinsfile'
-      - '.gitlab-ci.yml'
       - 'README.md'
       - 'LICENSE'
     branches:

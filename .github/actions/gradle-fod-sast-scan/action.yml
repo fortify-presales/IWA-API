@@ -57,14 +57,12 @@ runs:
         gradle-version: ${{ inputs.gradle_version }}
     # Install Fortify tools
     - name: Setup Fortify tools
-      uses: fortify/github-action/setup@v1
+      uses: fortify/github-action/setup@v1.2.2
       with:
         export-path: true
         fcli: latest
         sc-client: latest
-        fod-uploader: skip
         vuln-exporter: latest
-        bugtracker-utility: skip
     # Login to Fortify on Demand fcli session
     - name: Login fcli
       working-directory: ${{ env.BASE_DIR }}

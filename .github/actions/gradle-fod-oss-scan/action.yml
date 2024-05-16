@@ -53,14 +53,12 @@ runs:
         gradle-version: ${{ inputs.gradle_version }}
     # Install Fortify tools
     - name: Setup Fortify tools
-      uses: fortify/github-action/setup@v1.1.0
+      uses: fortify/github-action/setup@v1.2.2
       with:
         export-path: true
         fcli: latest
-        sc-client: skip
-        fod-uploader: skip
+        debricked-cli: latest
         vuln-exporter: latest
-        bugtracker-utility: skip
     # Login to Fortify on Demand fcli session
     - name: Login fcli
       working-directory: ${{ env.BASE_DIR }}
@@ -93,8 +91,7 @@ runs:
       shell: bash
       run: |
         rm -f package.zip
-        curl -L https://github.com/debricked/cli/releases/latest/download/cli_linux_x86_64.tar.gz | tar -xz debricked
-        ./debricked resolve
+        debricked resolve
         zip package *.lock
     # Start Fortify on Demand OSS scan and wait until results complete.
     - name: Perform FoD OSS scan
