@@ -1,24 +1,29 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
+# Default ignored files
+.idea
+*.iml
+*.fpr
 *.zip
-*.tar.gz
-*.rar
+*.pdf
+.fod/
+.fortify/
+/target/
+/.classpath
+/.project
+/.settings/
+/.env
+/iqReport.json
+/etc/WSD/
+/installs/
+/fortify-sca.settings
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+/.debricked.multiprojects.txt
+/.gradle.debricked.lock
+/.gradle-init-script.debricked.groovy
+.vscode/settings.json
